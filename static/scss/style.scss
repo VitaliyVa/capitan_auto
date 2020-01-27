@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap&subset=cyrillic');
+@import 'nav-bar';
+@import 'header';
+
+
+
+
+
+
+
+
+
+
+
+body {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	// font-family: 'OpenSans-Regular', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+	
+}
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+
+}
+.load_spin {
+    display: none;
+  }
+  .error {
+    color: #07ba07;
+    padding-top: 5px;
+    padding-left: 5px;
+  
+  }
+  .load_spin_active {
+    position: fixed;
+    z-index: 10000000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#4d5359, 0.7);
+    display: block !important;
+    
+    img {
+      width: 50px;
+      display: block;
+      margin: 20% auto;
+      height: auto;
+    }
+    
+  }
