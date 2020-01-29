@@ -195,6 +195,10 @@
     .logo-block img {
         width: 230px;
     }
+    .logo-block {
+        display: block;
+        width: 230px;
+    }
     .nav-bar {
        
         min-height: 65px;
@@ -242,6 +246,10 @@
 }
 @media (max-width: 503px) {
     .logo-block img {
+        width: 180px;
+    }
+    .logo-block {
+        display: block;
         width: 180px;
     }
 }

@@ -1,0 +1,232 @@
+.calculator {
+    background-color: #EBECEC;
+
+    .blue__title {
+        padding-top: 150px;
+        padding-bottom: 30px;
+        font-size: 33px;
+    }
+}
+.calc-block {
+    display: flex;
+    margin: 0 auto;
+    max-width: 890px;
+}
+.calc-style {
+    width: 430px;
+    margin: 0 10px;
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(115,115,115,1);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(115,115,115,1);
+    box-shadow: 0px 0px 16px 0px rgba(115,115,115,1);
+}
+.calc-block {
+    .inp-cons-wrap {
+        width: 280px;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .select {
+        width: 90px;
+        border: 1px solid #B2B3B3;
+        padding: 0px 0px;
+        border-radius: 10px;
+    }
+    .select__input {
+        width: 100% !important;
+        padding: 0px 5px;
+        border-radius: 10px;
+        height: 45px;
+    }
+    .inp-cons-wrap input {
+        padding: 13px 30px;
+    }
+    .cons__style {
+        font-size: 18px;
+    }
+    .field__icon {
+        margin-bottom: 3px;
+        img {
+            width: 11px;
+        }
+    }
+   
+    
+    
+}
+.auto-select-wrap {
+    display: flex;
+    align-items: center;
+
+}
+.form_for_calc {
+    display: flex;
+    flex-direction: column;
+}
+.inp-cons-wrap_bigger {
+    margin-top: 30px !important;
+
+    width: 100% !important;
+
+     .select__input {
+        padding: 0px 30px !important;
+    }
+    .select__wrap_item {
+        width: 100% !important;
+    }
+}
+.calk_submit {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    background-color: #B1413F;
+    color: #fff;
+    padding: 15px 100px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 100%;
+   font-weight: 700;
+}
+
+.result__title {
+    color: #B1413F;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+.cost_dinamic-block {
+    border-bottom: 2px solid #B1413F;
+    border-top: 2px solid #B1413F;
+    padding: 12px 0px 32px 12px;
+}
+
+.cost_prof {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.cost_name {
+    line-height: 1;
+    color: #727271;
+    font-size: 15px;
+    width: 85%;
+}
+
+.cost_num {
+    line-height: 1;
+    color: #727271;
+    font-size: 15px;
+}
+.last-cost__title {
+    margin-top: 15px;
+    line-height: 1;
+    color: #727271;
+    font-size: 15px;
+    font-weight: 700;
+}
+.cost_info {
+    padding-top: 15px;
+    line-height: 1.2;
+}
+.right_info {
+    color: #727271;
+    line-height: 1.2;
+    font-size: 15px;
+}
+.sub_info-block {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    margin-top: 50px;
+}
+.left_info {
+    margin-right: 40px;
+}
+@media (max-width: 1009px) {
+    .calc-block {
+        flex-direction: column;
+    }
+    .calc-style {
+        margin: 0 auto;
+      
+    }
+    .calc-right {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 696px) {
+    .calculator .select__wrap_item {
+        width: 100% !important;
+        padding: 5px 5px;
+        text-align: center;
+        font-size: 13px;
+    }
+    .calculator .select__wrap {
+        top: 35px;
+    }
+    .calculator .calk_submit {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 548px) {
+    .calculator .blue__title {
+        padding-top: 80px;
+        padding-bottom: 5px;
+        font-size: 19px;
+    }
+    .calc-style {
+        width: 100%;
+    }
+    .calc-block .cons__style {
+        font-size: 11px;
+        top: -7px;
+        left: 10px;
+    }
+    .calc-block .inp-cons-wrap input {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+    .field_text {
+        font-size: 12px;
+    }
+    .calc-block .select__input {
+        width: 100% !important;
+        padding: 0px 4px;
+        border-radius: 10px;
+        height: 33px;
+    }
+   
+    
+    
+}
+
+@media (max-width: 500px) {
+    .calc-style {
+        padding: 25px;
+        width: 100%;
+
+    }
+    .calc-block .cons__style {
+        font-size: 9px !important;
+    }
+    .calk_submit {
+        padding: 15px 50px;
+    }
+    .sub_info-block {
+        flex-direction: column;
+
+    }
+    .left_info {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -5,8 +5,8 @@
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width initial-scale=1">
 	<link rel="stylesheet" href="static/css/normalize.css">
+	<link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="static/css/style.css">
-	<link rel="stylesheet" href="static/css/animate.css">
 	
 
 </head>
@@ -18,7 +18,7 @@
 		</a>
 		<div class="right_nav-bar">
 			<ul class="nav_block">
-				<a href="#">
+				<a href="#calc__link" class="scroll_all">
 					<button class="nav__link nav__text main-hvr" data-hover="Калькулятор">
 						<div>Калькулятор</div>
 					</button>
@@ -42,7 +42,7 @@
 			
 		</div>
 		<div class="last-nav-bar">
-			<div class="nav-login">
+			<div class="nav-login log-in" data-src="#modal-form_user">
 				<img src="static/img/index/log-nav.svg" alt="" class="log-nav">
 				<div class="log_text nav__text">
 					Логін
@@ -65,6 +65,36 @@
 	</div>
 	<header class="header">
 		<div class="container">
+			<form method="POST" action="" data-fancybox class="formA cmxform true_form" id="modal-form_true" style="display:none;">
+				<img class="form_true_img" src="/static/img/png-123.png" alt="">
+				<div class="footer__sub">
+					Дякуємо, заявка опрацьована <br>
+					Наші менеджери звяжуться з вами
+				</div>
+				</form>
+			<div class="load_spin">
+				<img src="/static/img/712.svg" alt="">
+			</div>
+			<form method="POST" data-fancybox action="" class="formA cmxform" id="modal-form_user" style="display:none;">
+				
+				<div class="inp-vak-wrap">
+					<label class="label__style" for="firstname">Логин</label class="label__style">
+					<input id="firstname" name="username" placeholder="Логин" type="text" required>
+				</div>
+				<div class="inp-vak-wrap">
+					<label class="label__style" for="email">Пароль</label>
+					<input id="password" name="password" type="password" placeholder="*****" required>
+				</div>
+				<div class="error_block_false">
+					
+				</div>
+				<a href="">
+					<input class="submit_vak hvr-wobble-horizontal" type="submit" value="увійти">
+				</a>
+				<!-- <div class="no_pass">
+					{% trans 'Забули пароль?'
+				</div> -->
+			</form>
 			<div class="header__title">
 				<img src="static/img/index/header__title.svg" alt="">
 			</div>
@@ -79,10 +109,10 @@
 					КАНАДА <div class="line"></div>
 				</div>
 			</div>
-			<form action="/test/" method="POST" id="header-form">
+			<form action="" method="POST" id="header-form">
 				<div class="header-calk">
 					<div class="header-inp-wrap calk-blocks">
-						<input type="text" class="select__input cost-inp" placeholder="Вартість автомобіля">
+						<input type="text" class="select__input cost-inp cost_class_1" placeholder="Вартість автомобіля">
 					</div>
 				
 						<div class="select usd-select calk-blocks">
@@ -97,22 +127,22 @@
 								<input type="hidden" name="vant" class="form_select" value="test3">
 							</div>
 							<div class="select__wrap sel_fix_wrap" id="style-1">
-								<div class="select__wrap_item" data-id="test0">USD</div>
-								<div class="select__wrap_item" data-id="test1">РУБ</div>
-								<div class="select__wrap_item" data-id="test1">ГРН</div>
+								<div class="select__wrap_item" data-id="usd">USD</div>
+								<div class="select__wrap_item" data-id="rub">РУБ</div>
+								<div class="select__wrap_item" data-id="uan">ГРН</div>
 								
 								
 								
 							</div>
 						</div>
 						<div class="header-inp-wrap calk-blocks">
-							<input type="text" class="select__input cost-inp" placeholder="Об’єм двигуна">
+							<input type="text" class="select__input cost-inp cost_class_3" placeholder="Об’єм двигуна">
 						</div>
 						<div class="select type-select calk-blocks">
 							<!-- <div class="vertical_line">
 	
 							</div> -->
-							<div class="select__input type">
+							<div class="select__input type cost_class_4">
 								<div class="field_text">Тип двигуна</div>
 								<div class="field__icon">
 									<img src="static/img/index/ptichka.svg" alt="">
@@ -132,7 +162,7 @@
 							<!-- <div class="vertical_line">
 	
 							</div> -->
-							<div class="select__input year">
+							<div class="select__input year cost_class_5">
 								<div class="field_text">Рік випуску</div>
 								<div class="field__icon">
 									<img src="static/img/index/ptichka.svg" alt="">
@@ -148,7 +178,10 @@
 								
 							</div>
 						</div>
-						<input type="submit" class="header-btn calk-blocks" value="РОЗРАХУВАТИ">
+						<a href="#calc__link" class="scroll_all header_link_res">
+							<input type="submit" class="header-btn calk-blocks main_cost_result" value="РОЗРАХУВАТИ">
+						</a>
+						
 					
 				</div>
 			</form>
@@ -210,6 +243,507 @@
 		<!-- /.container -->
 	</header>
 	<!-- /.header -->
+	<section class="etaps">
+		<div class="container">
+			<h2 class="blue__title">
+				Етапи співпраці ТА порядок внесення оплат
+			</h2>
+			<div class="etaps-block">
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							1
+						</div>
+						<div class="etaps-text">
+							Вибір автомобіля
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							2
+						</div>
+						<div class="etaps-text">
+							Визначення 
+							сердньої ціни
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							3
+						</div>
+						<div class="etaps-text">
+							Обговорення 
+вартості доставки
+
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							4
+						</div>
+						<div class="etaps-text">
+							Підбір варіантів
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							5
+						</div>
+						<div class="etaps-text">
+							Завдаток та торги
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							6
+						</div>
+						<div class="etaps-text">
+							Покупка автомобіля
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							7
+						</div>
+						<div class="etaps-text">
+							Оплата
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							8
+						</div>
+						<div class="etaps-text">
+							Доставка порт та 
+завантаження в 
+контейнер
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							9
+						</div>
+						<div class="etaps-text">
+							Доставка автомобіля 
+в порт Євросоюзу
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							10
+						</div>
+						<div class="etaps-text">
+							Оформлення митних 
+документів
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							11
+						</div>
+						<div class="etaps-text">
+							Доставка автомобіля 
+							до замовника
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+				<div class="prof-wrap">
+					<div class="etaps-prof text-etaps">
+						<div class="abs-svg-etaps">
+							<img src="static/img/index/etaps_item.svg" alt="">
+						</div>
+						<div class="etaps-num">
+							12
+						</div>
+						<div class="etaps-text">
+							Розмитення, ремонт,
+сертифікація, 
+реєстрація
+						</div>
+						<img src="static/img/index/ptichka.svg" alt="" class="etaps-prichka">
+						
+					</div>
+					<p class="peshka">
+						<img src="static/img/index/close.svg" alt="" class="close-etaps">
+						
+						123123
+					</p>
+				</div>
+			</div>
+			<form class="form_consult" action="">
+				<h3 class="consultation">
+					ЗАМОВИТИ КОНСУЛЬТАЦІЮ 
+				</h3>
+				<div class="main_cons_wrap">
+					<div class="inp-cons-wrap">
+						<label class="cons__style" for="firstname1">Ім’я</label>
+						<input id="firstname1" name="firstname1" placeholder="Введіть своє ім’я" type="text">
+					</div>
+					<div class="inp-cons-wrap">
+						<label class="cons__style" for="mobile">Телефон</label>
+						<input id="mobile" name="mobile" placeholder="+38(___)__ __-___" type="text">
+					</div>
+					<div class="inp-cons-wrap">
+						<label class="cons__style" for="mail">Email</label>
+						<input id="mail" name="mail" placeholder="Введіть свій email" type="text">
+					</div>
+				</div>
+				<input type="submit" class="btn_consult" value="ЗАМОВИТИ">
+			</form>
+			<div class="block-post">
+				<div class="post-profile">
+					<div class="btn-post">
+						ЗВ’ЯЗАТИСЯ
+					</div>
+					<div class="border_fix">
+						<div class="left-post-wrap">
+							<div class="text-block-for-post">
+								<div class="post__title">
+									ДОСТАВКА БУДЬ ЯКОЇ ТЕХНІКИ 
+									ДО ЗАМВОНИКА
+								</div>
+								<div class="post__sub">
+									ЗА ПОТРЕБИ МИ ДОПОМОЖеМО ВАМ ІЗ РОЗМИТНЕННЯ, РЕМОНТОМ, 
+									ЗАПЧАСТИНАМИ, СЕРТИФІКАЦІЄЮ ТА РЕЄСТРАЦІЄЮ НА ОБЛІК
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-post-wrap">
+						<img src="static/img/index/2.png" alt="">
+					</div>
+					
+				</div>
+				<div class="post-profile bottom-post">
+					<div class="btn-post">
+						ЗВ’ЯЗАТИСЯ
+					</div>
+					<div class="border_fix">
+						
+						<div class="left-post-wrap">
+							<div class="text-block-for-post">
+								<div class="post__title">
+									ДОСТАВКА АВТОМОБІЛЯ 
+									АВТОВОЗОМ
+								</div>
+								<div class="post__sub">
+									ЗА ПОТРЕБИ МИ ДОПОМОЖЕМО ВАМ ІЗ ТРАНСПОРТУВАННЯМ АВТО 
+									ПО ТЕРИТОРІЇ ЄВРОПЕЙСЬКОГО СОЮЗУ ТА  УКРАЇНИ
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-post-wrap">
+						<img src="static/img/index/3.png" alt="">
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.etaps -->
+	<section class="calculator">
+		<div class="container">
+			<h2 id="calc__link" class="blue__title">
+				КАЛЬКУЛЯТОР ВАРТОСТІ РОЗМИТЕНННЯ
+			</h2>
+			<div class="calc-block">
+				<div class="calc-left calc-style">
+					<form class="form_for_calc" action="">
+						<div class="auto-select-wrap">
+							<div class="inp-cons-wrap">
+								<label class="cons__style" for="cost1">Вартість автомобіля</label>
+								<input class="cost_class_1" id="cost1" name="cost1" placeholder="10000" type="text" required>
+							</div>
+							<div class="select usd-select calk-blocks">
+								<!-- <div class="vertical_line">
+		
+								</div> -->
+								<div class="select__input usd">
+									<div class="field_text cost_class_2">USD</div>
+									<div class="field__icon">
+										<img src="static/img/index/ptichka.svg" alt="">
+									</div>
+									<input type="hidden" name="cost2" class="form_select" value="test3">
+								</div>
+								<div class="select__wrap sel_fix_wrap" id="style-1">
+									<div class="select__wrap_item" data-id="usd">USD</div>
+									<div class="select__wrap_item" data-id="rub">РУБ</div>
+									<div class="select__wrap_item" data-id="uan">ГРН</div>
+									
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="inp-cons-wrap inp-cons-wrap_bigger">
+							<label class="cons__style" for="cost3">Об’єм двигуна, куб. двиг</label>
+							<input id="cost3" name="cost3" class="cost_class_3" placeholder="25000" type="text" required>
+						</div>
+						<div class="select type-select calk-blocks inp-cons-wrap_bigger">
+							<!-- <div class="vertical_line">
+	
+							</div> -->
+							<div class="select__input type cost_class_4">
+								<label class="cons__style" for="cost4">Тип двигуна</label>
+								<div class="field_text">Бензин</div>
+								
+								<div class="field__icon">
+									<img src="static/img/index/ptichka.svg" alt="">
+								</div>
+								<input type="hidden" name="vant" class="form_select" value="test3">
+							</div>
+							<div class="select__wrap sel_fix_wrap" id="style-1">
+								<div class="select__wrap_item" data-id="test0">qwe</div>
+								<div class="select__wrap_item" data-id="test1">asd</div>
+								<div class="select__wrap_item" data-id="test1">zxc</div>
+								
+								
+								
+							</div>
+						</div>
+						<div class="select year-select calk-blocks inp-cons-wrap_bigger">
+							<!-- <div class="vertical_line">
+	
+							</div> -->
+							<div class="select__input year cost_class_5">
+								<label class="cons__style" for="cost5">Рік випуску</label>
+								<div class="field_text">2019</div>
+								
+								<div class="field__icon">
+									<img src="static/img/index/ptichka.svg" alt="">
+								</div>
+								<input type="hidden" name="vant" class="form_select" value="test3">
+							</div>
+							<div class="select__wrap sel_fix_wrap" id="style-1">
+								<div class="select__wrap_item" data-id="test0">qwe</div>
+								<div class="select__wrap_item" data-id="test1">asd</div>
+								<div class="select__wrap_item" data-id="test1">zxc</div>
+								
+								
+								
+							</div>
+						</div>
+						<input type="submit" class="calk_submit" value="РОЗРАХУВАТИ">
+					</form>
+				</div>
+				<div class="calc-right calc-style">
+					<div class="result__title">
+						РЕЗУЛЬТАТ РОЗРАХУНКУ
+					</div>
+					<div class="cost_dinamic-block">
+						<div class="cost_prof">
+							<div class="cost_name">
+								Ціна з розмитненням
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+						<div class="cost_prof">
+							<div class="cost_name">
+								НДЗ
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+						<div class="cost_prof">
+							<div class="cost_name">
+								Мито
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+						<div class="cost_prof">
+							<div class="cost_name">
+								Акцизний збір
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+						<div class="cost_prof">
+							<div class="cost_name">
+								Всього митних платежів
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+						<div class="last-cost__title">
+							Додаткові витрати
+						</div>
+						<div class="cost_prof">
+							<div class="cost_name">
+								Пенсійний фонд
+							</div>
+							<div class="cost_num">
+								0 $
+							</div>
+						</div>
+					</div>
+					<div class="cost_name cost_info">
+						* Розрахунок зроблений за новими 
+						тарифами (закон №8487 / 8488)
+					</div>
+				</div>
+			</div>
+			<div class="sub_info-block">
+				<div class="left_info">
+					<img src="static/img/index/info-svg.svg" alt="">
+				</div>
+				<div class="right_info">
+					Розрахунок проводиться з урахуванням закону №8487, вартість транспортування 
+					по США  може бути більше або менше в діапозоні 300 - 500 $, в залежності від 
+					місця стоянки авто.  Вартість фрахту може бути більше для гарбарітних авто. 
+					Для електромобілів об'єм двигуна не враховується
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.calculator -->
+	<section class="auto_card">
+		<div class="container">
+			
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.auto_card -->
 
 
 
@@ -222,6 +756,35 @@
 
 	<script type="text/javascript" src="static/js/jQuery.js"></script>
 	<script type="text/javascript" src="static/js/lazyloadxt.extra.js"></script>
-  	<script type="text/javascript" src="static/js/main.js"></script>
+	<script type="text/javascript" src="static/js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="static/js/ajax_form.js"></script>
+	  <script type="text/javascript" src="static/js/main.js"></script>
+	  <!-- <script defer type="module">
+		import fetchScript from '/static/js/index.js';
+		const fetch = fetchScript();
+		var test = function (){
+			fetch('static/js/jquery.fancybox.min.js', {timeout: 1000})
+			.then(function(response) {
+			  console.log('script loaded successfully');
+			  var modal_form = document.getElementById('modal-form');
+				if (modal_form != null) {
+					$('.link-fanc').fancybox({
+						touch: false,
+						scrolling: 'hidden',	
+					});
+				}
+				$('.log-in').fancybox({
+					touch: false,
+					scrolling: 'hidden',
+				});
+			})
+			.catch(function(ex) {
+			  console.log('failed', ex);
+			});
+		};
+		setTimeout(test, 1000);
+	</script> -->
 </body>
 </html>
