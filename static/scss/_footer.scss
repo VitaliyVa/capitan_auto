@@ -12,6 +12,9 @@
     margin: 0 auto;
     margin-bottom: -400px;
     background-color: #fff;
+   
+
+  
 }
 .footer_info-content {
     display: flex;
@@ -90,6 +93,14 @@
 .med {
     font-weight: 500;
     font-size: 21px;
+}
+.starway {
+    img {
+        width: 75px;
+    }
+}
+.footer-main-logo {
+    width: 300px;
 }
 @media (max-width: 1124px) {
     .footer_info-block {

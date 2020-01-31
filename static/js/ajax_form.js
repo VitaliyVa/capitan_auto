@@ -11,13 +11,26 @@ $(function() {
 //  *
 //  **/
 function Onload() {
-    valide_form('#last_id_form', '.inp-vak-wrap', true);
-    valide_form('#modal-form', '.inp-vak-wrap', true);
-    valide_form('#modal-form_user', '.inp-vak-wrap', false);
-    valide_form('#vak_file_edit', '.inp-vak-wrap', true);
-    valide_form('#id_form_block', '.inp-sto-wrap', true);
-    valide_form('#id_form_contact', '.inp-sto-wrap', true);
-    valide_form('#kabin_form', '.inp-vak-wrap', false);
+
+    var more_form = $('.mini-user-form');
+
+    for (var testz = 0; testz < more_form.length; testz++) {
+        var tehas = more_form[testz];
+        var dinamic_id = 'active_form' + testz;
+        $(tehas).attr('id', dinamic_id);
+        var dinamic_main_id = '#' + $(tehas).attr('id');
+        console.log(dinamic_main_id);
+        valide_form(dinamic_main_id, '.inp-mini-wrap', false);
+    }
+
+
+    valide_form('.form_consult', '.inp-cons-wrap', true);
+    valide_form('#modal-form_user', '.inp-vak-wrap', true);
+    valide_form('#modal-form_sale_car', '.inp-vak-wrap', true);
+    valide_form('#modal-form_post1', '.inp-vak-wrap', true);
+    valide_form('#modal-form_post2', '.inp-vak-wrap', true);
+    
+   
 }
 function location_leng() {
     return location.pathname.split('/')[1];
@@ -48,18 +61,35 @@ function valide_form(id_form, error_inp_wrap, check_request) {
         }
         $(id_form).validate({
             errorPlacement: function (event, validator) {
-                console.log("111");
+                console.log(validator);
+                console.log(event);
                 $(validator).parents(error_inp_wrap).append($(event));
             },
             rules: {
-                firstname: {
+                name_car: {
                     required: true,
                 },
-                email: {
+                tel_car: {
+                    required: true,
+                },
+                mail_car: {
                     required: true,
                     email: true,
                 },
-                number: {
+                usernames: {
+                    required: true,
+                },
+                passwords: {
+                    required: true,
+                },
+                firstname1: {
+                    required: true,
+                },
+                mail: {
+                    required: true,
+                    email: true,
+                },
+                mobile: {
                     required: true,
                 },
                 username: {
@@ -68,11 +98,11 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 password: {
                     required: true,
                 },
-                fMail: {
+                log_in: {
                     required: true,
                     email: true,
                 },
-                fName: {
+                pass: {
                     required: true,
                 },
                 fPhone: {
@@ -86,14 +116,30 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 },
              },
              messages: {
-                firstname: {
+                usernames: {
                     required: error_text.required,
                 },
-                email: {
+                passwords: {
+                    required: error_text.required,
+                },
+                firstname1: {
+                    required: error_text.required,
+                },
+                name_car: {
+                    required: error_text.required,
+                },
+                tel_car: {
+                    required: error_text.required,
+                },
+                mail_car: {
                     required: error_text.required,
                     email: error_text.email
                 },
-                number: {
+                mail: {
+                    required: error_text.required,
+                    email: error_text.email
+                },
+                mobile: {
                     required: error_text.required,
                 },
                 username: {
@@ -102,11 +148,11 @@ function valide_form(id_form, error_inp_wrap, check_request) {
                 password: {
                     required: error_text.required,
                 },
-                fMail: {
+                log_in: {
                     required: error_text.required,
                     email: error_text.email
                 },
-                fName: {
+                pass: {
                     required: error_text.required,
                 },
                 fPhone: {

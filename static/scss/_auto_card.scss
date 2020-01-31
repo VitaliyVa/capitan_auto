@@ -97,8 +97,14 @@ border-bottom-right-radius: 10px;
     margin-top: 60px;
     margin-bottom: 80px;
     cursor: pointer;
+    &:hover {
+        .re-img {
+            transform: rotate(360deg);
+        }
+    }
     img {
         margin-right: 15px;
+        transition: transform .4s;
     }
 }
 .re-text {

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<link rel="stylesheet" href="static/css/normalize.css">
+	<link rel="stylesheet" href="static/css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="static/css/slick.css">
+	<link rel="stylesheet" href="static/css/slick-theme.css">
+
+	<link rel="stylesheet" href="static/css/style.css">
+	
+
+</head>
+<body class="card">
+	<div class="nav-bar">
+		<div class="container nav-container">
+			<a href="index.html" class="logo-block">
+			<img data-src="static/img/index/logo.svg" alt="">
+		</a>
+		<div class="right_nav-bar">
+			<ul class="nav_block">
+				<a href="#calc__link" class="scroll_all">
+					<button class="nav__link nav__text main-hvr" data-hover="Калькулятор">
+						<div>Калькулятор</div>
+					</button>
+				</a>
+				<a href="#">
+					<button class="nav__link nav__text main-hvr" data-hover="Новини">
+						<div>Новини</div>
+					</button>
+				</a>
+				<a href="#">
+					<button class="nav__link nav__text main-hvr" data-hover="Про нас">
+						<div>Про нас</div>
+					</button>
+				</a>
+				<a href="#">
+					<button class="nav__link nav__text main-hvr" data-hover="Контакти">
+						<div>Контакти</div>
+					</button>
+				</a>
+			</ul>
+			
+		</div>
+		<div class="last-nav-bar">
+			<div class="nav-login log-in" data-src="#modal-form_user">
+				<img data-src="static/img/index/log-nav.svg" alt="" class="log-nav">
+				<div class="log_text nav__text">
+					Логін
+				</div>
+			</div>
+			<div class="lang-block">
+				<div class="nav__text">
+					UA
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="main_menu">
+			<div id="nav-icon4">
+				<span class="first-span"></span>
+				<span></span>
+				<span class="last-span"></span>
+			  </div>
+		</div>
+	</div>
+
+		<header class="kabinet">
+			<div class="container">
+				<div class="kab__title-wrap">
+					<div class="kab__title">
+						ОСОБИСТИЙ КАБІНЕТ
+					</div>
+					<img src="static/img/settings.svg" alt="">
+				</div>
+				<div class="user_name">
+					Бурега Назар Васильович
+				</div>
+				<div class="all-tab-wrap">
+					<div class="auto-tab-link-block">
+						<div data-tab="tab_1" class="main_tab__link main_tab__link_active">
+							Особисті дані
+						</div>
+						<div data-tab="tab_2" class="main_tab__link">
+							Мої замовлення
+						</div>
+						<div class="main_tab__link">
+							Вихід
+						</div>
+					</div>
+					<div class="tab-auto-content-block">
+						<div id="tab_1" class="tab-auto-content-prof tab-auto-content-prof_active">
+							<div class="main_user_data">
+								Особисті дані
+							</div>
+							<div class="user-data-prof">
+								<div class="user-data-type">
+									Ім’я
+								</div>
+								<div class="user-data-name">
+									Назар Бурега
+								</div>
+							</div>
+							<div class="user-data-prof">
+								<div class="user-data-type">
+									Електронна пошта
+								</div>
+								<div class="user-data-name">
+									Slavko@gmail.com
+								</div>
+							</div>
+							<div class="user-data-prof">
+								<div class="user-data-type">
+									Номер телефону
+								</div>
+								<div class="user-data-name">
+									+38 (96) 675 -15-**
+								</div>
+							</div>
+							<div class="user-data-prof">
+								<div class="user-data-type">
+									Стать 
+								</div>
+								<div class="user-data-name">
+									Чоловіча
+								</div>
+							</div>
+							<div class="user-data-prof">
+								<div class="user-data-type">
+									Дата народження
+								</div>
+								<div class="user-data-name">
+									13.09.1989
+								</div>
+							</div>
+							
+						</div>
+						<div id="tab_2" class="tab-auto-content-prof">
+							<div class="main_user_data">
+								Мої замовлення
+							</div>
+							<div class="mini-tab_link-block">
+								<div data-tab="3" class="mini-tab__link mini-tab__link_active">
+									Поточні замовлення
+								</div>
+								<div data-tab="4" class="mini-tab__link">
+									Всі замволення
+								</div>
+							</div>
+							<div class="mini-tab-content-block">
+								<div id="3" class="mini-tab-content-prof mini-tab-content-prof_active">
+									<div class="main_static_info main_static_info_active">
+										<div class="static_item">
+											#
+										</div>
+										<div class="static_item">
+											Статус
+										</div>
+										<div class="static_item">
+											Доставка в порт
+										</div>
+										<div class="static_item">
+											Порт
+										</div>
+										<div class="static_item">
+											Загальний
+										</div>
+										<div class="hidden-btn">
+											.
+										</div>
+									</div>
+									<div class="wrap_user_items">
+										<div class="user-dinamic-info-wrap">
+											<div class="main_static_info main_static_info_hidden">
+												<div class="static_item">
+													#
+												</div>
+												<div class="static_item">
+													Статус
+												</div>
+												<div class="static_item">
+													Доставка в порт
+												</div>
+												<div class="static_item">
+													Порт
+												</div>
+												<div class="static_item">
+													Загальний
+												</div>
+												<div class="hidden-btn">
+													.
+												</div>
+											</div>
+											<div class="fix_last-wrap">
+												<div class="static_item num_item">
+													10230
+												</div>
+												<div class="static_item">
+													Знайдено
+												</div>
+												<div class="static_item">
+													28.01.2020
+												</div>
+												<div class="static_item">
+													Україна. Одеса
+												</div>
+												<div class="static_item">
+													В процесі
+												</div>
+												<div class="user-btn">
+													<span class="linne1"></span>
+													<span class="linne2"></span>
+												</div>
+											</div>
+										</div>
+										<div class="hidden_item">
+											<div class="active-name-car">
+												FORD ESCAPE (2016)
+											</div>
+											<div class="active-photo-car">
+												<div class="kvadratik"></div>
+												<div class="kvadratik"></div>
+												<div class="kvadratik"></div>
+												<div class="kvadratik"></div>
+												<div class="kvadratik"></div>
+											</div>
+											<form action="" class="mini-user-form">
+												<div class="inp-mini-wrap">
+													<input class="log_in" name="log_in" placeholder="Логін" type="text">
+												</div>
+												<div class="inp-mini-wrap">
+													<input class="pass" name="pass" placeholder="Пароль" type="password">
+												</div>
+												<input type="submit" class="btn_user_active" value="ВІДСТЕЖУВАТИ">
+											</form>
+										</div>
+									</div>
+									
+									
+									
+								</div>
+								<div id="4" class="mini-tab-content-prof">
+									2
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</header>
+		<!-- /.kabinet -->
+
+
+
+
+
+
+
+
+
+
+
+	
+			<div class="footer_info-block">
+				<div class="footer_info-content">
+					<img data-src="static/img/footer/footer-logo.svg" alt="" class="footer-logo">
+					<div class="adress-block">
+						<div class="name-adress">
+							Наша адреса:
+						</div>
+						<div class="adress-prof">
+							<img data-src="static/img/footer/footer-nav.svg" alt="">
+							<a href="#" class="adress-text">
+								м. Тернопіль, площа  
+								Героїв Євромайдану, 6
+							</a>
+						</div>
+					</div>
+					<div class="adress-block">
+						<div class="name-adress">
+							Наші номери телефонів:
+						</div>
+						<div class="adress-prof">
+							<img data-src="static/img/footer/mob-1.svg" alt="">
+							<a href="tel:+38(097)968-64-83" class="adress-text">
+								+38 <b>(097)</b> 968-64-83
+							</a>
+						</div>
+						<div class="adress-prof adress-prof_link">
+							<img data-src="static/img/footer/mob-2.svg" alt="">
+							<a href="tel:+38(095)922-45-34" class="adress-text adress-text_link">
+								+38 <b>(095)</b> 922-45-34
+							</a>
+						</div>
+						
+					</div>
+					<div class="adress-block">
+						<div class="adress-prof adress-prof_mail">
+							<img data-src="static/img/footer/footer-mail.svg" alt="">
+							<a href="mailto:info@capitanavto.ua" class="adress-text">
+								info@capitanavto.ua
+							</a>
+						</div>
+					</div>
+					<div class="adress-block adress-block_soc">
+						<div class="name-adress">
+							Ми в соцмережах:
+						</div>
+						<div class="adress-prof adress-prof-soc">
+							<a href="#">
+								<img data-src="static/img/footer/footer-soc-1.svg" alt="">
+							</a>
+							<a href="#">
+								<img data-src="static/img/footer/footer-soc-2.svg" alt="">
+							</a>
+							<a href="#">
+								<img data-src="static/img/footer/footer-soc-3.svg" alt="">
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				<div class="footer_info-img">
+					<img data-src="static/img/index/5.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.auto_card -->
+	<footer class="footer">
+		<form method="POST" action="" data-fancybox class="formA cmxform true_form" id="modal-form_true" style="display:none;">
+			<img class="form_true_img" src="/static/img/png-123.png" alt="">
+			<div class="footer__sub">
+				Дякуємо, заявка опрацьована <br>
+				Наші менеджери звяжуться з вами
+			</div>
+			</form>
+		<div class="load_spin">
+			<img data-src="/static/img/712.svg" alt="">
+		</div>
+		<form method="POST" data-fancybox action="" class="formA cmxform" id="modal-form_user" style="display:none;">
+			
+			<div class="inp-vak-wrap">
+				<label class="label__style" for="firstname">Логин</label class="label__style">
+				<input id="firstname" name="username" placeholder="Логин" type="text" required>
+			</div>
+			<div class="inp-vak-wrap">
+				<label class="label__style" for="email">Пароль</label>
+				<input class="password" name="password" type="password" placeholder="*****" required>
+			</div>
+			<div class="error_block_false">
+				
+			</div>
+			<a href="">
+				<input class="submit_vak hvr-wobble-horizontal" type="submit" value="увійти">
+			</a>
+			<!-- <div class="no_pass">
+				{% trans 'Забули пароль?'
+			</div> -->
+		</form>
+			<div class="footer-map">
+				<iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2588.5978365615156!2d25.58940031558123!3d49.54874197936112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473036b156b919fb%3A0xb5483b1f0d1fa5e8!2z0L_Qu9C-0YnQsCDQk9C10YDQvtGX0LIg0ITQstGA0L7QvNCw0LnQtNCw0L3RgywgNiwg0KLQtdGA0L3QvtC_0ZbQu9GMLCDQotC10YDQvdC-0L_RltC70YzRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNDYwMDA!5e0!3m2!1sru!2sua!4v1580302702985!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen="">
+				</iframe>
+			</div>
+		<!-- /.container -->
+		<div class="footer-wrap">
+			<div class="container">
+				<div class="main_footer-wrap">
+					<a href="index.html">
+						<img data-src="static/img/index/logo.svg" alt="" class="footer-main-logo">
+					</a>
+					<div class="last-footer_text">
+						© СapitаnAvto. <span class="med">Всі права захищено</span>
+					</div>
+					<div class="starway">
+						<a href="https://starwayua.com/">
+							<img data-src="static/img/footer/sw.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+	</footer>
+	<!-- /.footer -->
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="static/js/jQuery.js"></script>
+	<script type="text/javascript" src="static/js/slick.min.js"></script>
+	<script type="text/javascript" src="static/js/lazyloadxt.extra.js"></script>
+	<script type="text/javascript" src="static/js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="static/js/ajax_form.js"></script>
+	  <script type="text/javascript" src="static/js/main.js"></script>
+	  <!-- <script defer type="module">
+		import fetchScript from '/static/js/index.js';
+		const fetch = fetchScript();
+		var test = function (){
+			fetch('static/js/jquery.fancybox.min.js', {timeout: 1000})
+			.then(function(response) {
+			  console.log('script loaded successfully');
+			  var modal_form = document.getElementById('modal-form');
+				if (modal_form != null) {
+					$('.link-fanc').fancybox({
+						touch: false,
+						scrolling: 'hidden',	
+					});
+				}
+				$('.log-in').fancybox({
+					touch: false,
+					scrolling: 'hidden',
+				});
+			})
+			.catch(function(ex) {
+			  console.log('failed', ex);
+			});
+		};
+		setTimeout(test, 1000);
+	</script> -->
+</body>
+</html>

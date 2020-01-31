@@ -5,6 +5,10 @@
 @import 'calculator';
 @import 'auto_card';
 @import 'footer';
+// ====
+@import 'card-styles';
+@import 'news-page';
+@import 'kabinet';
 
 
 
@@ -40,10 +44,19 @@ body {
     display: none;
   }
   .error {
-    color: #07ba07;
+    color: #B1413F;
     padding-top: 5px;
     padding-left: 5px;
   
+  }
+  .form_true_img {
+    width: 75px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 11px;
+  }
+  .footer__sub {
+    text-align: center;
   }
   .load_spin_active {
     position: fixed;
@@ -60,4 +73,13 @@ body {
       height: auto;
     }
     
+  }
+  @media (max-width: 402px) {
+      .fancybox-content {
+        padding: 25px;
+      }
+      .footer__sub {
+        text-align: center;
+        font-size: 14px;
+       }
   }

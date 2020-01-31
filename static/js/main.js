@@ -4,6 +4,177 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
+// scroll ==================>
+    // console.log(window.location.pathname.split('/')[2]);
+
+    // if (window.location.pathname.split('/')[2] == '' && localStorage.team_swipe == 1) {
+       
+       
+    //     localStorage.setItem('link_href', 0);
+    //     function linkTime() {
+            
+    //         var destination = $('#block_id').offset().top;
+    //         $('html, body').animate({ scrollTop: destination }, 600);
+    //         return false;
+    //     }
+    //     setTimeout(linkTime, 500);
+    //     localStorage.team_swipe = 0;
+    // } 
+    
+    // console.log(localStorage.link_href);
+    // $('.link_calkul_solo').on("click", function() {
+        
+    //     if (window.location.pathname.split('/')[2] == "") {
+           
+    //     function linkTime_2() {
+    //         var destination = $('#block_id').offset().top;
+    //         $('html, body').animate({ scrollTop: destination }, 600);
+    //         return false;
+    //     }
+    //     setTimeout(linkTime_2, 500);
+
+    //     } else {
+    //         localStorage.team_swipe = 1;
+    //         window.location.pathname = "/";
+
+
+    //     }
+    // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $('#main_lang').on('click', function() {
+        $('.hidden_lang-block').toggleClass('hidden_lang-block_active')
+    });
+// $('.main_lang_active').on('click', function() {
+//     $('.hidden_lang-block').removeClass('hidden_lang-block_active');
+// });
+//     $(document).mouseup(function(e) {
+//         var select3 = $(e.target).parents('.hidden_lang_item'); // тут указываем класс элемента
+//         console.log('in');
+//         if (select3.length > 0) {} else {
+//             $('.hidden_lang-block').removeClass('hidden_lang-block_active');
+//             console.log(select3[1]);
+           
+//         }
+//         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // tabs==========
+    $(".main_tab__link").on("click", function(){
+        ($(this)[0].dataset.tab);
+        var className = ($(this)[0].dataset.tab);
+        console.log(className);
+        ($(".main_tab__link").removeClass("main_tab__link_active"));
+         ($(this).addClass("main_tab__link_active"));
+        ($(".tab-auto-content-prof").removeClass("tab-auto-content-prof_active"));
+            ($("#"+$(this)[0].dataset.tab).addClass("tab-auto-content-prof_active"));
+
+    });
+    $(".mini-tab__link").on("click", function(){
+        ($(this)[0].dataset.tab);
+        var className = ($(this)[0].dataset.tab);
+        console.log(className);
+        ($(".mini-tab__link").removeClass("mini-tab__link_active"));
+         ($(this).addClass("mini-tab__link_active"));
+        ($(".mini-tab-content-prof").removeClass("mini-tab-content-prof_active"));
+            ($("#"+$(this)[0].dataset.tab).addClass("mini-tab-content-prof_active"));
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var slidFinder = document.getElementById('slider_id');
+
+
+    if (slidFinder != null) {   
+    $('.main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.main-slider',
+        centerMode: true,
+        focusOnSelect: true,
+        // responsive: [{
+
+        //     breakpoint: 1024,
+        //     settings: {
+        //       slidesToShow: 2,
+        //       infinite: true
+        //     }
+      
+        //   }]
+      });
+
+    }
+
+
+
+
     $('.select__input').on('click', function(){
        
         let fieldt = $(this).parents('.select').find(".select__wrap");
@@ -101,7 +272,18 @@ $('.main_cost_result').on("click", function() {
         touch: false,
         scrolling: 'hidden',
     });
-
+    $('.car-form').fancybox({
+        touch: false,
+        scrolling: 'hidden',
+    });
+    $('.post1').fancybox({
+        touch: false,
+        scrolling: 'hidden',
+    });
+    $('.post2').fancybox({
+        touch: false,
+        scrolling: 'hidden',
+    });
 
     $.extend($.lazyLoadXT, {
         edgeY:  250,
@@ -112,11 +294,29 @@ $('.main_cost_result').on("click", function() {
       $(".scroll_all").on('click', function () {
         var elementClick = $(this).attr("href");
         // console.log(elementClick);
+      
         var destination = $(elementClick).offset().top;
+        var destContacts = (destination - 600)
         $('html, body').animate({ scrollTop: destination }, 600);
+        console.log(destContacts);
         return false;
-    });
+        
  
+    });
+
+    $(".scroll_for_contact").on('click', function () {
+        var elementClick = $(this).attr("href");
+        // console.log(elementClick);
+      
+        var destination = $(elementClick).offset().top;
+        var destContacts = (destination - 100)
+        $('html, body').animate({ scrollTop: destContacts }, 600);
+        console.log(destContacts);
+        return false;
+        
+ 
+    });
+   
 // перемикач мови
 
    
@@ -144,7 +344,24 @@ $('#lang-btn').on('click', function(){
 	$('.main_menu').click(function(){
         $("#nav-icon4").toggleClass('open');
         $(".right_nav-bar").toggleClass('right_nav-bar_active');
+
+        if ($('.right_nav-bar').hasClass('right_nav-bar_active')) {
+            $("html,body").css("overflow", "hidden");
+          } else {
+              $("html,body").css("overflow", "visible");
+        
+          }
+        
     });
+   $('.nav__link').on('click', function() {
+    $("#nav-icon4").removeClass('open');
+    $(".right_nav-bar").removeClass('right_nav-bar_active');
+   });
+
+
+  
+
+    
     
     $('.left-svg').addClass('eng-svg_active');
     $('.eng-svg').on("click", function() {
@@ -189,6 +406,20 @@ $(document).mouseup(function(e) {
       $('.etaps-prichka').removeClass('etaps-prichka_active');
     }
     
+});
+
+
+
+$('.user-btn').on("click", function() {
+    var user_btn = $(this)
+    var hidden_item = $(this).parents(".wrap_user_items").find(".hidden_item");
+
+
+   $(user_btn).toggleClass('user-btn_active');
+   $(hidden_item).toggleClass('hidden_item_active');
+  
+
+  
 });
 
 
