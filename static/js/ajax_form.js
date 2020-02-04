@@ -29,6 +29,7 @@ function Onload() {
     valide_form('#modal-form_sale_car', '.inp-vak-wrap', true);
     valide_form('#modal-form_post1', '.inp-vak-wrap', true);
     valide_form('#modal-form_post2', '.inp-vak-wrap', true);
+    valide_form('#modal-form_settings', '.inp-vak-wrap', true);
     
    
 }

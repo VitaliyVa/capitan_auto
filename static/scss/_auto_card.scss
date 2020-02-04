@@ -18,12 +18,18 @@
     width: 25%;
     background-color: #fff;
     margin-top: 50px;
+    min-height: 500px;
     margin-right: 25px;
     -webkit-box-shadow: 0px 0px 18px -8px rgba(135,135,135,1);
 -moz-box-shadow: 0px 0px 18px -8px rgba(135,135,135,1);
 box-shadow: 0px 0px 18px -8px rgba(135,135,135,1);
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
+    transition: transform .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .name_car {
     text-align: center;
@@ -114,4 +120,9 @@ border-bottom-right-radius: 10px;
     color: #B1413F;
     
 
+}
+@media (max-width:1660px){
+    .auto-card-prof {
+        min-height: 447px;
+    }
 }

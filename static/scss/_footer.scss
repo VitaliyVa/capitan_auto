@@ -66,6 +66,7 @@
 .footer-map {
     position: relative;
     z-index: 0;
+    min-height: 650px;
     margin-bottom: -4px;
     iframe {
         position: relative;
@@ -102,6 +103,62 @@
 .footer-main-logo {
     width: 300px;
 }
+
+.bottom_icon-svg {
+    margin-right: 15px;
+    svg {
+        width: 30px;
+        height: auto;
+        
+
+        .pathh {
+            fill: #727271;
+        stroke: #727271;
+        transition: fill .2s, stroke .2s;
+        }
+    }
+
+    &:hover {
+        .pathh {
+            fill: #B1413F;
+            stroke: #B1413F;
+        }
+    }
+}
+.bottom_icon-svg:nth-child(2) {
+    svg {
+        width: 40px;
+    }
+}
+$tile-bg: #cfcfdf;
+.tile {
+    animation: .3s ease-in-out both fade-in;
+  
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .tile {
+      
+      // :nth-child(1-12) 
+      &:nth-child(#{$i}) {
+        
+        // Delay the animation. Delay increases as items loop.
+        animation-delay: $i * (.03s);
+      }
+    }
+  }
 @media (max-width: 1124px) {
     .footer_info-block {
         margin-bottom: -30px;

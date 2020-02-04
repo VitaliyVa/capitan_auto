@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="400px" height="80px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 400 80"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="712" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Intro Demo Black Caps Inline">
+		<font-face-src>
+			<font-face-name name="Intro Demo Black Caps Inline"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="Ш" horiz-adv-x="1066" d="M272.996 700l-182.994 0 0 -700 886.996 0 0 700 -182.994 0 0 -534.995 -169.007 0 0 534.995 -182.994 0 0 -534.995 -169.007 0 0 534.995zm608.004 -612.006l0 544.01 10.9959 0 0 -555.006 -715.995 0 0 555.006 10.9959 0 0 -544.01 341.005 0 0 544.01 10.9959 0 0 -544.01 342.002 0z"/>
+   <glyph unicode="А" horiz-adv-x="712" d="M217.006 87.9936l276.001 0 40.9919 -87.9936 175.003 0 0 25.9939 -315.995 683.008 -77.011 0 -314.998 -683.008 0 -25.9939 175.003 0 41.0052 87.9936zm133.998 519l5.99654 0 251.004 -538.997 -13.0036 0 -46.0045 99.0028 -386.996 0 -47.0017 -99.0028 -13.0036 0 249.009 538.997zm193.99 -428.999l-378.992 0 187.994 407.007 1.0105 0 189.988 -407.007zm-262.997 71.0012l146.005 0 -74.0061 161.003 -71.9984 -161.003z"/>
+   <glyph unicode="С" horiz-adv-x="785" d="M47.0017 350.007c0.997208,-238 181,-358.011 358.995,-357 149.009,0 306.01,77.9949 332.004,275.987l-176.001 0c-19.0001,-74.99 -80.0027,-112.99 -156.003,-112.99 -105.997,0.997208 -173.993,90.9985 -173.993,194.003 0,115.995 68.9935,194.987 173.993,194.987 75.0033,0 128.002,-31.9904 152.998,-102.992l176.001 0c-26.9911,186.996 -183.991,266.002 -328.999,266.002 -177.995,0 -357.998,-120.011 -358.995,-357.998zm572.996 -144.01l12.0064 0c-42.0024,-87.9936 -130.009,-135.993 -226.007,-135.993 -134.995,-1.0105 -271.001,98.9895 -271.001,280.003 0,181.997 136.006,281 271.001,281 94.0035,0 176.001,-42.0024 222.005,-125.01l-12.0064 0c-43.9968,78.0082 -119.997,116.009 -209.999,116.009 -128.999,0 -261.003,-97.0084 -261.003,-271.998 0,-174.006 132.004,-270.004 261.003,-270.004 93.0062,0 170.004,40.9919 214.001,125.994z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Intro Demo Black Caps Inline";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil0 {fill:#EBECEC}
+    .fnt0 {font-weight:normal;font-size:88.8309px;font-family:'Intro Demo Black Caps Inline'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2717735524784">
+   <text x="131" y="71"  class="fil0 fnt0">США</text>
+   <path class="fil0" d="M42 32l77 0 0 16 -77 0 0 -16zm7 8l63 0 0 0 -63 0 0 0z"/>
+  </g>
+ </g>
+</svg>

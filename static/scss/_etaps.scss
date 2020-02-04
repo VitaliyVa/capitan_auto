@@ -6,6 +6,7 @@
     color: #09335D;
     line-height: 1;
     text-align: center;
+    font-family: 'Intro Black', sans-serif;
     padding-top: 100px;
     margin-bottom: 50px;
 }
@@ -26,7 +27,9 @@
     box-shadow: 0px 0px 18px -2px rgba(166,163,166,1);
 cursor: pointer;
 }
-
+.post_forms {
+    width: 500px;
+}
 .etaps-num {
     color: #EBECEC;
     font-weight: 900;
@@ -80,6 +83,7 @@ cursor: pointer;
     right: 30px;
     top: 15px;
     right: 30px;
+    cursor: pointer;
 }
 .etaps-prichka {
     transform: rotate(0deg);
@@ -230,6 +234,7 @@ box-shadow: 0px 0px 22px -3px rgba(173,173,173,1);
     max-width: 1143px;
     padding-bottom: 50px;
     margin-top: 90px;
+    min-height: 420px;
 }
 .left-post-wrap {
     display: flex;
@@ -308,7 +313,7 @@ box-shadow: 0px 0px 32px 0px rgba(125,120,125,1);
    cursor: pointer;
    bottom: 0px;
 }
-.bottom-post {
+.post-profile:nth-child(2n) {
     flex-direction: row-reverse;
 
 
@@ -340,7 +345,13 @@ box-shadow: 0px 0px 32px 0px rgba(125,120,125,1);
         max-width: unset;
         width: 100%;
     }
-    .bottom-post .border_fix {
+    .post-profile:nth-child(2n) .right-post-wrap {
+        width: 44%;
+    }
+    .post-profile:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+    .post-profile:nth-child(2n) .border_fix {
         margin-left: 0;
     }
     .btn-post {
@@ -351,7 +362,7 @@ box-shadow: 0px 0px 32px 0px rgba(125,120,125,1);
         margin: 0 auto !important;
         margin-top: 30px !important;
     }
-    .bottom-post .btn-post {
+    .post-profile:nth-child(2n) .btn-post {
         position: relative !important;
         left: unset !important;
         font-weight: 700;
@@ -383,7 +394,7 @@ box-shadow: 0px 0px 32px 0px rgba(125,120,125,1);
     .right-post-wrap {
         width: 70%;
     }
-    .bottom-post .right-post-wrap {
+    .post-profile:nth-child(2n) .right-post-wrap {
         width: 70%;
     }
     .border_fix {
@@ -395,7 +406,11 @@ box-shadow: 0px 0px 32px 0px rgba(125,120,125,1);
         width: 85%;
     }
 }
-
+@media (max-width: 696px) {
+    .post_forms {
+        width: 85%;
+    }
+}
 @media (max-width: 483px) {
     .consultation {
         font-size: 20px;
