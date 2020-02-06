@@ -702,15 +702,6 @@ $('#lang-btn').on('click', function(){
 
   
 
-    
-    
-    $('.left-svg').addClass('eng-svg_active');
-    $('.eng-svg').on("click", function() {
-        $(".eng-svg").removeClass("eng-svg_active")
-        $(this).addClass('eng-svg_active');
-    });
-
-
 
 
 
@@ -857,6 +848,195 @@ if (it4 <= 1300) {
 
 }
 tests4();
+
+
+
+
+$('.left-svg').addClass('eng-svg_active');
+$('.eng-svg').on("click", function() {
+    $(".eng-svg").removeClass("eng-svg_active")
+    $(this).addClass('eng-svg_active');
+    if(this == $('.left-svg')[0]) {
+        
+        $('.left-svg').addClass('left-svg_fix');
+    } else if (this !== $('.left-svg')[0]) {
+        $('.left-svg').removeClass('left-svg_fix');
+    }
+
+    if ($('.right-svg').hasClass('eng-svg_active')) {
+            console.log('1');
+
+                var it = 3;
+                var speed = 200;
+
+            function tests1() {
+
+                if (it <= 5) {
+
+                    // document.body.innerHTML = i;
+
+                    var content = $('#test1').text(it);
+                    
+                    speed -= it;
+                    it++;
+
+                    setTimeout(arguments.callee, speed);
+
+                }
+               
+
+            }
+            tests1();
+
+            var it2 = 5;
+
+            function tests22() {
+
+            if (it2 <= 9) {
+
+                // document.body.innerHTML = i;
+
+                var content2 = $('#test2').text(it2);
+                
+                speed -= it2;
+                it2++;
+
+                setTimeout(arguments.callee, speed);
+
+            }
+
+
+            }
+            tests22();
+            var it3 = 15;
+
+            function tests33() {
+
+            if (it3 <= 32) {
+
+                // document.body.innerHTML = i;
+
+                var content3 = $('#test3').text(it3);
+                
+                speed -= it3;
+                it3++;
+
+                setTimeout(arguments.callee, speed);
+
+            }
+
+
+            }
+            tests33();
+            var it4 = 1300;
+
+            function tests44() {
+
+            if (it4 <= 1600) {
+
+                // document.body.innerHTML = i;
+
+                var content4 = $('#test4').text(it4);
+                var max_speed = -11845591;
+                max_speed -= it4;
+                it4++;
+                setTimeout(arguments.callee, 0);
+
+            }
+
+
+            }
+            tests44();
+
+    }
+    if ($('.left-svg_fix').hasClass('eng-svg_active')) {
+            console.log('1');
+
+                var it = 5;
+                var speed = 200;
+
+            function tests1() {
+
+                if (it >= 3) {
+
+                    // document.body.innerHTML = i;
+
+                    var content = $('#test1').text(it);
+                    
+                    speed -= it;
+                    it--;
+
+                    setTimeout(arguments.callee, speed);
+
+                }
+               
+
+            }
+            tests1();
+
+            var it2 = 9;
+
+            function tests22() {
+
+            if (it2 >= 5) {
+
+                // document.body.innerHTML = i;
+
+                var content2 = $('#test2').text(it2);
+                
+                speed -= it2;
+                it2--;
+
+                setTimeout(arguments.callee, speed);
+
+            }
+
+
+            }
+            tests22();
+            var it3 = 32;
+
+            function tests33() {
+
+            if (it3 >= 15) {
+
+                // document.body.innerHTML = i;
+
+                var content3 = $('#test3').text(it3);
+                
+                speed -= it3;
+                it3--;
+
+                setTimeout(arguments.callee, speed);
+
+            }
+
+
+            }
+            tests33();
+            var it4 = 1600;
+
+            function tests44() {
+
+            if (it4 >= 1300) {
+
+                // document.body.innerHTML = i;
+
+                var content4 = $('#test4').text(it4);
+                var max_speed = -11845591;
+                max_speed -= it4;
+                it4--;
+                setTimeout(arguments.callee, 0);
+
+            }
+
+
+            }
+            tests44();
+
+    }
+});
+
 
 
 });

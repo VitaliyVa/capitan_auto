@@ -430,6 +430,12 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+@media (max-width: 1511px) {
+    .last-header-prof {
+        min-width: 170px;
+        width: 19%;
+    }
+}
 @media (max-width: 1365px) {
     .header_link_res {
         display: block;
@@ -461,6 +467,15 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .usd-select .select__wrap_item {
         width: 293px;
+    }
+}
+@media (max-width: 1118px) {
+    .last-header-block {
+        justify-content: center;
+    }
+    .last-header-prof {
+        min-width: 170px;
+       width: 33%;
     }
 }
 @media (max-width: 854px) {
@@ -539,6 +554,15 @@ input[type=number]::-webkit-outer-spin-button {
         width: 50%;
         width: 293px !important;
         margin: 0 auto;
+    }
+}
+@media (max-width: 677px) {
+    
+    .last-header-prof {
+     
+       width: 100%;
+       margin-top: 30px;
+       margin-right: 0px;
     }
 }
 @media (max-width: 540px) {
