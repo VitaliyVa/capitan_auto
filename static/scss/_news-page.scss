@@ -227,9 +227,20 @@
     justify-content: space-between;
     border-bottom: 1.5px solid #B1413F;
 }
+.sread_img { 
+    transition: transform .2s;
+}
 .web-prof {
     display: flex;
+    cursor: pointer;
     align-items: center;
+   
+
+    &:hover {
+        .sread_img {
+            transform: rotate(90deg);
+        }
+    }
 }
 .web-text {
     line-height: 1;

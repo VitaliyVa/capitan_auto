@@ -1,7 +1,6 @@
 .header {
     background: url('../img/index/head-bg.png') no-repeat center / cover;
     padding-bottom: 60px;
-    min-height: 100vh;
 }
 
 .main-hvr:hover{cursor: pointer}
@@ -185,18 +184,19 @@
 .line {
     width: 45px;
     height: 7px;
-    background-color: #727271;
+    background-color: #c7c7c7;
     margin: 0 5px;
-    transition: color .2s, background-color .2s;
+    transition: color .3s, background-color .3s, transform .3s;
+    transform: scale(1.1);
  
 }
 .eng-svg {
     font-family: 'IntroDemo', sans-serif;
-    color: #727271;
-    transition: color .2s, background-color .2s;
+    color: #c7c7c7;
+    transition: color .3s, background-color .3s, transform .3s;
     &:hover {
         color: #c7c7c7;
-
+        transform: scale(1.1);
         .line {
             background-color: #c7c7c7;
          }
@@ -211,8 +211,10 @@
 }
 .eng-svg_active {
     color: #EBECEC;
+     transform: scale(1.1);
     .line {
        background-color: #EBECEC;
+        transform: scale(1.1);
     }
     &:hover {
         color: #EBECEC;
@@ -240,6 +242,12 @@ background-color: #fff;
     justify-content: space-between;
     align-items: center;
     padding: 5px 14px;
+    transition: background-color .2s, color .2s;
+    cursor: pointer;
+    &:hover {
+        color: #fff;
+        background-color: #ccc;
+    }
     
 border-radius: 3px;
 color: #727271;
@@ -306,15 +314,7 @@ color: #727271;
         transform: rotate(180deg);
     }
 }
-.select__wrap_item {
-    transition: background-color .2s, color .2s;
-    border-bottom: 1px solid #727271;
-    cursor: pointer;
-    &:hover {
-        color: #fff;
-        background-color: #ccc;
-    }
-}
+
 .usd {
     width: 95px;
 
@@ -504,6 +504,12 @@ input[type=number]::-webkit-outer-spin-button {
     .calk-blocks {
         width: 293px;
         margin: 0 auto;
+        margin-top: 3px;
+        border-radius: 5px;
+
+        input {
+            border-radius: 5px;
+        }
     }
     .header-calk {
         max-width: 585px;
@@ -511,6 +517,7 @@ input[type=number]::-webkit-outer-spin-button {
     .select__input {
         margin: 0 auto;
         width: 293px;
+        border-radius: 5px;
     }
     .year-select .select__wrap_item {
         width: 293px;
@@ -524,6 +531,7 @@ input[type=number]::-webkit-outer-spin-button {
     .header-btn {
         width: 293px !important;
         margin: 0 auto;
+        margin-top: 3px;
     }
     .select__wrap {}
     .header_link_res {

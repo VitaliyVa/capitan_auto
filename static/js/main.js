@@ -54,23 +54,32 @@ $(document).ready(function(){
 
 //   console.log(card.card1);
 
+
   $('.more_slide_car').on('click', function() {
     
      var fragment = document.createDocumentFragment();
      var cur_step = 0;
      for (var key in card) {
        cur_step += 0.2;
-      
+      var ini = 1;
+      ini++;
        var creat_card1 = createCard(card[key], cur_step);
     //    console.log(creat_card1);
        fragment.appendChild(creat_card1);
      
        $('.auto-card-block')[0].appendChild(fragment);
-       console.log( $('.auto-card-block')[0]);
-    //    console.log(fragment);
+
+     
+       
+    //    console.log( $('.auto-card-block')[0]);
+       console.log(ini);
        
      }
-
+     setTimeout(function(){
+        $('.auto-card-prof').removeClass('tile');
+        $('.auto-card-prof').css("animation-delay", "0s");
+        console.log('finish');
+        }, 1200);
         function createCard (product, step) {
             var card_prof = document.createElement('div');
             card_prof.style.setProperty('animation-delay', (step) + 's'),
@@ -330,40 +339,43 @@ $('.more_slide_posts').on('click', function() {
 
 // scroll ==================>
     // console.log(window.location.pathname.split('/')[2]);
+   
 
-    // if (window.location.pathname.split('/')[2] == '' && localStorage.team_swipe == 1) {
+    if (window.location.pathname == '/C:/Users/odmin/Desktop/Cap-Auto/index.html' && localStorage.team_swipe == 1) {
        
        
-    //     localStorage.setItem('link_href', 0);
-    //     function linkTime() {
+        localStorage.setItem('team_swipe', 0);
+        function linkTime() {
             
-    //         var destination = $('#block_id').offset().top;
-    //         $('html, body').animate({ scrollTop: destination }, 600);
-    //         return false;
-    //     }
-    //     setTimeout(linkTime, 500);
-    //     localStorage.team_swipe = 0;
-    // } 
-    
-    // console.log(localStorage.link_href);
-    // $('.link_calkul_solo').on("click", function() {
+            var destination = $('#calc__link').offset().top;
+            $('html, body').animate({ scrollTop: destination }, 600);
+            return false;
+        }
+        setTimeout(linkTime, 500);
+        localStorage.team_swipe = 0;
+    } 
+    localStorage.setItem('team_swipe', 0);
+    console.log(window.location.pathname);
+    console.log(localStorage.team_swipe);
+    $('#calc__blink').on("click", function() {
         
-    //     if (window.location.pathname.split('/')[2] == "") {
+        if (window.location.pathname == '/C:/Users/odmin/Desktop/Cap-Auto/index.html') {
            
-    //     function linkTime_2() {
-    //         var destination = $('#block_id').offset().top;
-    //         $('html, body').animate({ scrollTop: destination }, 600);
-    //         return false;
-    //     }
-    //     setTimeout(linkTime_2, 500);
+        function linkTime_2() {
+            var destination = $('#calc__link').offset().top;
+            $('html, body').animate({ scrollTop: destination }, 600);
+            return false;
+        }
+        setTimeout(linkTime_2, 500);
 
-    //     } else {
-    //         localStorage.team_swipe = 1;
-    //         window.location.pathname = "/";
+        } else {
+            localStorage.team_swipe = 1;
+            console.log(localStorage.team_swipe);
+            window.location.pathname = "/C:/Users/odmin/Desktop/Cap-Auto/index.html";
 
 
-    //     }
-    // });
+        }
+    });
 
 
 
@@ -684,6 +696,7 @@ $('#lang-btn').on('click', function(){
    $('.nav__link').on('click', function() {
     $("#nav-icon4").removeClass('open');
     $(".right_nav-bar").removeClass('right_nav-bar_active');
+    $("html,body").css("overflow", "visible");
    });
 
 

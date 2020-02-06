@@ -130,12 +130,38 @@
         width: 40px;
     }
 }
+.auto-wraps {
+    
+    transition: transform .2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
 $tile-bg: #cfcfdf;
 .tile {
     animation: .3s ease-in-out both fade-in;
-  
+    // animation: fade-hover-out .3s alternate paused;
+    &:hover {
+       
+        // animation: fade-hover .3s alternate paused;
+    }
+    
 }
-
+@keyframes fade-hover {
+     
+   100% {
+        transform: scale(1.05);
+    }
+}
+@keyframes fade-hover-out {
+  
+    100% {
+        transform: scale(1.05); 
+    }
+}
 @keyframes fade-in {
     0% {
       opacity: 0;
@@ -159,6 +185,8 @@ $tile-bg: #cfcfdf;
       }
     }
   }
+
+
 @media (max-width: 1124px) {
     .footer_info-block {
         margin-bottom: -30px;
